@@ -2,7 +2,7 @@
     tabs : {
         summary : [
             {
-                label : 'Hello World 00000',
+                label : 'Hello World',
                 component : 'c:helloworld'
             }
         ],
