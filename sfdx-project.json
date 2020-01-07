@@ -3,6 +3,9 @@
     {
       "path": "ebikes-lwc/force-app",
       "default": true
+    },
+    {
+      "path": "trailhead/force-app"
     }
   ],
   "namespace": "",
