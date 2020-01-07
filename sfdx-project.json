@@ -1,7 +1,7 @@
 {
   "packageDirectories": [
     {
-      "path": "force-app",
+      "path": "ebikes-lwc/force-app",
       "default": true
     }
   ],
