@@ -74,9 +74,6 @@
             ],
             "c/tile": [
                 "../../../../../../lwc/tile/tile.js"
-            ],
-            "c/myFirstWebComponent": [
-                "../../../../../../../../../../trailhead/force-app/main/default/lwc/myFirstWebComponent/myFirstWebComponent.js"
             ]
         }
     },
