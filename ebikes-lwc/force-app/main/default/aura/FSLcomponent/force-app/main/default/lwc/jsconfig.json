@@ -2,11 +2,88 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/accountMap": [
+                "../../../../../../lwc/accountMap/accountMap.js"
+            ],
+            "c/bikeCard": [
+                "../../../../../../lwc/bikeCard/bikeCard.js"
+            ],
+            "c/bikeCustomizerButtonBar": [
+                "../../../../../../lwc/bikeCustomizerButtonBar/bikeCustomizerButtonBar.js"
+            ],
+            "c/createCase": [
+                "../../../../../../lwc/createCase/createCase.js"
+            ],
+            "c/data": [
+                "../../../../../../lwc/data/data.js"
+            ],
+            "c/detail": [
+                "../../../../../../lwc/detail/detail.js"
+            ],
+            "c/hero": [
+                "../../../../../../lwc/hero/hero.js"
+            ],
+            "c/heroDetails": [
+                "../../../../../../lwc/heroDetails/heroDetails.js"
+            ],
+            "c/inlineMessage": [
+                "../../../../../../lwc/inlineMessage/inlineMessage.js"
+            ],
+            "c/ldsUtils": [
+                "../../../../../../lwc/ldsUtils/ldsUtils.js"
+            ],
+            "c/list": [
+                "../../../../../../lwc/list/list.js"
+            ],
+            "c/orderBuilder": [
+                "../../../../../../lwc/orderBuilder/orderBuilder.js"
+            ],
+            "c/orderItemTile": [
+                "../../../../../../lwc/orderItemTile/orderItemTile.js"
+            ],
+            "c/paginator": [
+                "../../../../../../lwc/paginator/paginator.js"
+            ],
+            "c/placeholder": [
+                "../../../../../../lwc/placeholder/placeholder.js"
+            ],
+            "c/productCard": [
+                "../../../../../../lwc/productCard/productCard.js"
+            ],
+            "c/productFilter": [
+                "../../../../../../lwc/productFilter/productFilter.js"
+            ],
+            "c/productListItem": [
+                "../../../../../../lwc/productListItem/productListItem.js"
+            ],
+            "c/productTile": [
+                "../../../../../../lwc/productTile/productTile.js"
+            ],
+            "c/productTileList": [
+                "../../../../../../lwc/productTileList/productTileList.js"
+            ],
+            "c/pubsub": [
+                "../../../../../../lwc/pubsub/pubsub.js"
+            ],
+            "c/selector": [
+                "../../../../../../lwc/selector/selector.js"
+            ],
+            "c/similarProducts": [
+                "../../../../../../lwc/similarProducts/similarProducts.js"
+            ],
+            "c/tile": [
+                "../../../../../../lwc/tile/tile.js"
+            ],
+            "c/myFirstWebComponent": [
+                "../../../../../../../../../../trailhead/force-app/main/default/lwc/myFirstWebComponent/myFirstWebComponent.js"
+            ]
+        }
     },
     "include": [
         "**/*",
-        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+        "../../../../.sfdx/typings/lwc/**/*.d.ts",
+        "../../../../../../../../../../.sfdx/typings/lwc/**/*.d.ts"
     ],
     "typeAcquisition": {
         "include": [
