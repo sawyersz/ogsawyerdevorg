@@ -1,39 +1,19 @@
 <template>
 <lightning-tabset variant="scoped">
 <lightning-tab label="Accounts">
-    <table><caption>Phone numbers</caption>
-        <thead>
-        <tr>
-        <th>Name</th>
-        <th colspan="2">Phone</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>John</td>
-        <td>577854</td>
-        <td>577855</td>
-        </tr>
-        <tr>
-        <td>Jack</td>
-        <td>577856</td>
-        <td>577857</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-        <td>&nbsp;</td>
-        <td>Personal</td>
-        <td>Office</td>
-        </tr>
-        </tfoot>
-        </table>
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={data}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>   
 </lightning-tab>
 <lightning-tab label="Resource Allocation" title="2nd tab extended title">
-    Two Content
+    More Content for Everyone!
 </lightning-tab>
 <lightning-tab label="Updates">
-    Three Content
+    You Thought we ran out of content...
 </lightning-tab>
 </lightning-tabset>
 </template>
