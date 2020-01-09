@@ -1,0 +1,6 @@
+<template>
+	<p style="color: dodgerblue;">{taskname}</p>
+	<template for:each={tickets.data} for:item="ticket">
+		<p key={ticket.Id}>{ticket.Name}</p>
+	</template>
+</template>
