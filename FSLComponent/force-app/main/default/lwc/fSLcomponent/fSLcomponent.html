@@ -1,19 +1,26 @@
 <template>
-<lightning-tabset variant="scoped">
-<lightning-tab label="Accounts">
-        <div style="height: 300px;">
-            <lightning-datatable
-                    key-field="id"
-                    data={data}
-                    columns={columns}>
-            </lightning-datatable>
-        </div>   
+<lightning-tabset>
+<lightning-tab label="Work Orders" title="2nd tab extended title">
+    <lightning-card title="Table" icon-name="custom:custom63">
+
+        <div class="slds-m-around_medium">
+            <template if:true={contact.data}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={contact.data}
+                    columns={columns}
+                    onsave={handleSave}
+                    draft-values={draftValues}>
+                </lightning-datatable>
+            </template>
+            <template if:true={contact.error}>
+                <!-- handle Apex error -->
+            </template>
+        </div>
+    </lightning-card> 
 </lightning-tab>
-<lightning-tab label="Resource Allocation" title="2nd tab extended title">
-    More Content for Everyone!
-</lightning-tab>
-<lightning-tab label="Updates">
-    You Thought we ran out of content...
+<lightning-tab label="Service Appointments">
+    Insert Data Table with Service Appointments
 </lightning-tab>
 </lightning-tabset>
 </template>
