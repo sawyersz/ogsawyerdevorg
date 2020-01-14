@@ -1,4 +1,4 @@
-import { LightningElement, api, wire } from 'lwc';
+    import { LightningElement, api, wire } from 'lwc';
 import GET_TASKS from '@salesforce/apex/FSLQueryService.getTasks';
 import { LightningElement, wire, track } from 'lwc';
 import getContactList from '@salesforce/apex/ContactController.getContactList';
@@ -64,5 +64,3 @@ export default class FSLcomponent extends LightningElement {
         });
     }
 }
-
-
