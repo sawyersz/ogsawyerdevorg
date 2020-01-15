@@ -8,5 +8,5 @@ const recordMetadata = {
 };
 
 export default function fetchDataHelper({ amountOfRecords }) {
-    return null
+    
 }
