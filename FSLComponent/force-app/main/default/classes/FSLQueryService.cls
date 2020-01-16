@@ -1,7 +1,7 @@
 public with sharing class FSLQueryService {
         @AuraEnabled(cacheable=true)
         public static List<WorkOrder> getTasks() {
-            return [SELECT Id, Project_Task__c, AccountId, Duration, Description
+            return [SELECT Id, AccountId, Duration, Description
                     FROM WorkOrder
                     LIMIT 10];
         }

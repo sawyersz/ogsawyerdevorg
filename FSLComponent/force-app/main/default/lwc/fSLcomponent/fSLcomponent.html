@@ -3,10 +3,10 @@
 <lightning-tab label="Work Orders" title="2nd tab extended title">
 <lightning-card title="Work Order Data" icon-name="custom:custom63">
     <div class="slds-m-around_medium">
-        <template if:true={taskList.data}>
+        <template if:true={woList.data}>
             <lightning-datatable
                 key-field="Id"
-                data={taskList.data}
+                data={woList.data}
                 columns={columns}>
             </lightning-datatable>
         </template>

@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 import { LightningElement, api, wire, track } from 'lwc';
-import GET_TASKS from '@salesforce/apex/FSLQueryService.getTasks';
+import GET_WOS from '@salesforce/apex/FSLQueryService.getWorkOrders';
 import GET_APPTS from '@salesforce/apex/FSLQueryService.getAppts';
 // import { updateRecord } from 'lightning/uiRecordApi';
 // import { refreshApex } from '@salesforce/apex';
@@ -11,27 +12,35 @@ import GET_APPTS from '@salesforce/apex/FSLQueryService.getAppts';
 
 const COLS = [
     { label: 'Id', fieldName: 'Id', editable: false },
-    { label: 'Project Task', fieldName: 'Project Task', editable: false },
-    { label: 'Account Id', fieldName: 'Account', editable: false },
-    { label: 'Duration', fieldName: 'Duration' },
-    { label: 'Description', fieldName: 'Description' }
+    // { label: 'Project Task', fieldApiName: 'Project_Task__c', type:'text' },
+    { label: 'Account Id', fieldName: 'AccountId', editable: false },
+    { label: 'Duration', fieldName: 'Duration', editable: true },
+    { label: 'Description', fieldName: 'Description', editable: true }
 ];
 
 const COLSTWO = [
     { label: 'Id', fieldName: 'Id', editable: false},
-    { label: 'Work Order', fieldName: 'Work Order', editable: false},
+    { label: 'Work Order', fieldName: 'Work_Order__c', editable: true},
     { label: 'Account Id', fieldName: 'Account', editable: false},
-    { label: 'Status', fieldName: 'Status', editable: false},
-    { label: 'Duration', fieldName: 'Duration', editable: false}
+    { label: 'Status', fieldName: 'Status', editable: true},
+    { label: 'Duration', fieldName: 'Duration', editable: true}
 ];
 
 
 export default class FSLcomponent extends LightningElement {
      @api recordId
-     @wire(GET_TASKS) taskList
+     @wire(GET_WOS) woList
      @wire(GET_APPTS) apptList
      @track columns = COLS;
      @track columnstwo = COLSTWO;
+
+
+        onClick() {
+            const event = new CustomEvent('buttonclick',{
+                detail: this.product.fields.Id.value
+            });
+            this.dispatchEvent(event);
+        }
 
     // @track error;
     // @track draftValues = [];
