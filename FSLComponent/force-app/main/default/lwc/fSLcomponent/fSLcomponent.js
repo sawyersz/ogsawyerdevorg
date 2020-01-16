@@ -20,12 +20,13 @@ const COLS = [
 
 const COLSTWO = [
     { label: 'Id', fieldName: 'Id', editable: false},
-    { label: 'Work Order', fieldName: 'Work_Order__c', editable: true},
+    { label: 'Work Order', fieldName: 'Work_Order__c', editable: false},
     { label: 'Account Id', fieldName: 'Account', editable: false},
     { label: 'Status', fieldName: 'Status', editable: true},
     { label: 'Duration', fieldName: 'Duration', editable: true}
 ];
 
+// { type: ‘button-icon’, fixedWidth: 30, typeAttributes: { iconName: ‘utility:close’, name: ‘delete_record’, title: ‘Delete’, variant: ‘bare’, alternativeText: ‘delete’, disabled: false } },
 
 export default class FSLcomponent extends LightningElement {
      @api recordId
@@ -33,13 +34,11 @@ export default class FSLcomponent extends LightningElement {
      @wire(GET_APPTS) apptList
      @track columns = COLS;
      @track columnstwo = COLSTWO;
+     @track clickedButtonLabel;
 
 
-        onClick() {
-            const event = new CustomEvent('buttonclick',{
-                detail: this.product.fields.Id.value
-            });
-            this.dispatchEvent(event);
+        handleClick(event) {
+            this.clickedButtonLabel = event.target.label;
         }
 
     // @track error;
