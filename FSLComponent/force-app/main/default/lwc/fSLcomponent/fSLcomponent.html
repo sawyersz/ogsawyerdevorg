@@ -7,7 +7,8 @@
             <lightning-datatable
                 key-field="Id"
                 data={woList.data}
-                columns={columns}>
+                columns={columns}
+                onrowaction={handleRowAction}>
             </lightning-datatable>
         </template>
     </div>
@@ -20,7 +21,8 @@
              <lightning-datatable
                 key-field="Id"
                 data={apptList.data}
-                columns={columnstwo}>
+                columns={columnstwo}
+                onrowaction={handleRowAction}>
             </lightning-datatable>
         </template>
     </div>
